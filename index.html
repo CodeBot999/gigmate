@@ -1,0 +1,261 @@
+<html>
+ <head>
+  <title>
+   gigmate
+  </title>
+  <script src="https://cdn.tailwindcss.com">
+  </script>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet"/>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&amp;display=swap" rel="stylesheet"/>
+  <style>
+   body {
+            font-family: 'Roboto', sans-serif;
+        }
+        .fade-in {
+            animation: fadeIn 2s ease-in-out;
+        }
+        @keyframes fadeIn {
+            0% { opacity: 0; }
+            100% { opacity: 1; }
+        }
+        .unfold {
+            animation: unfold 2s ease-in-out forwards;
+        }
+        @keyframes unfold {
+            0% { opacity: 0; transform: scale(0.8); }
+            100% { opacity: 1; transform: scale(1); }
+        }
+        .logo-center {
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            z-index: 50;
+            animation: logoFadeOut 2s ease-in-out forwards;
+        }
+        @keyframes logoFadeOut {
+            0% { opacity: 1; }
+            100% { opacity: 0; }
+        }
+        .content {
+            display: none;
+        }
+        .content.show {
+            display: block;
+        }
+  </style>
+ </head>
+ <body class="bg-gray-900 text-gray-200">
+  <!-- Logo Center -->
+  <div class="logo-center">
+   <img alt="GigMate logo placeholder" class="h-24" height="350" src="/gigmate.png" width="300"/>
+  </div>
+  <!-- Main Content -->
+  <div class="content fade-in">
+   <!-- Navbar -->
+   <nav class="bg-darkgray-800 shadow-md">
+    <div class="container mx-auto px-4 py-4 flex justify-between items-center">
+     <a href="/index.html">
+      <img alt="GigMate logo placeholder" class="h-12" height="75" src="/gigmate.png" width="130"/>
+     </a>
+     <div class="space-x-4">
+      <a class="text-gray-300 hover:text-lime-400" href="/index.html">
+       Home
+      </a>
+      <a class="text-gray-300 hover:text-lime-400" href="/gigs.html">
+       Browse Gigs
+      </a>
+      <a class="text-gray-300 hover:text-lime-400" href="#">
+       Post a Gig
+      </a>
+     </div>
+    </div>
+   </nav>
+   <!-- Hero Section -->
+   <section class="bg-gray-800 text-gray-200 py-20">
+    <div class="container mx-auto px-4 text-center">
+     <h1 class="text-4xl font-bold mb-4">
+      Welcome to GigMate
+     </h1>
+     <p class="text-lg mb-8">
+      The ultimate gig marketplace for students to earn pocket money by offering services and completing small gigs.
+     </p>
+     <a class="bg-lime-400 text-gray-900 px-6 py-3 rounded-full font-semibold" href="#" onclick="scrollDown()">
+      Get Started
+     </a>
+    </div>
+   </section>
+   <!-- How It Works Section -->
+   <section class="py-20">
+    <div class="container mx-auto px-4 text-center">
+     <h2 class="text-3xl font-bold mb-8">
+      How It Works
+     </h2>
+     <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+      <div class="bg-gray-800 p-6 rounded-lg shadow-md">
+       <img alt="Icon representing job posting" class="mx-auto mb-4" height="100" src="https://storage.googleapis.com/a1aa/image/pNuEcl1-ZNifJZAcdh9JE2gk5DBlUi5JLYvwhHlLbqQ.jpg" width="100"/>
+       <h3 class="text-xl font-semibold mb-2 text-lime-400">
+        Post a Gig
+       </h3>
+       <p>
+        Employers can post gigs for tasks like tutoring, design work, assignments, and more.
+       </p>
+      </div>
+      <div class="bg-gray-800 p-6 rounded-lg shadow-md">
+       <img alt="Icon representing browsing gigs" class="mx-auto mb-4" height="100" src="https://storage.googleapis.com/a1aa/image/WyK92xpHGs-5s6QAMm6HbM-4U9cXN8diM0cR7ziH_H4.jpg" width="100"/>
+       <h3 class="text-xl font-semibold mb-2 text-lime-400">
+        Browse Gigs
+       </h3>
+       <p>
+        Students can browse through available gigs and find tasks that match their skills.
+       </p>
+      </div>
+      <div class="bg-gray-800 p-6 rounded-lg shadow-md">
+       <img alt="Icon representing getting paid" class="mx-auto mb-4" height="100" src="https://storage.googleapis.com/a1aa/image/o2Rd4M7oJx7UGB47uoD0bWzhEKzod4whGe5EjVKa0Dg.jpg" width="100"/>
+       <h3 class="text-xl font-semibold mb-2 text-lime-400">
+        Get Paid
+       </h3>
+       <p>
+        Complete the gig and get paid. It's that simple!
+       </p>
+      </div>
+     </div>
+    </div>
+   </section>
+   <!-- Featured Gigs Section -->
+   <section class="py-20 bg-gray-900">
+    <div class="container mx-auto px-4">
+     <h2 class="text-3xl font-bold text-center mb-8">
+      Featured Gigs
+     </h2>
+     <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+      <div class="bg-gray-800 p-6 rounded-lg shadow-md">
+       <img alt="Image representing a tutoring gig" class="w-full h-40 object-cover mb-4" height="200" src="https://storage.googleapis.com/a1aa/image/wJtfeGi8bUo3qHZ6mG-H0R37yCW0QIaVJnHsrvVXP2k.jpg" width="300"/>
+       <h3 class="text-xl font-semibold mb-2 text-lime-400">
+        Math Tutoring
+       </h3>
+       <p class="text-gray-300 mb-4">
+        Help a high school student with algebra and geometry. Get paid per hour.
+       </p>
+       <a class="text-lime-400 font-semibold" href="/apply.html">
+        Apply Now
+       </a>
+      </div>
+      <div class="bg-gray-800 p-6 rounded-lg shadow-md">
+       <img alt="Image representing a design gig" class="w-full h-40 object-cover mb-4" height="200" src="https://storage.googleapis.com/a1aa/image/f2Tuw38BsGoRCtfeH2GiLLP50CSIqy9C0L-0A8UmA28.jpg" width="300"/>
+       <h3 class="text-xl font-semibold mb-2 text-lime-400">
+        Logo Design
+       </h3>
+       <p class="text-gray-300 mb-4">
+        Design a logo for a startup. Get paid for the entire project.
+       </p>
+       <a class="text-lime-400 font-semibold" href="/apply.html">
+        Apply Now
+       </a>
+      </div>
+      <div class="bg-gray-800 p-6 rounded-lg shadow-md">
+       <img alt="Image representing an assignment gig" class="w-full h-40 object-cover mb-4" height="200" src="https://storage.googleapis.com/a1aa/image/s3Hh947QX7F6hqhNVe77r0Oh8vJgsiEPGJQakjkYSMM.jpg" width="300"/>
+       <h3 class="text-xl font-semibold mb-2 text-lime-400">
+        Operating Systems Assignment
+       </h3>
+       <p class="text-gray-300 mb-4">
+        Complete an Operating Systems assignment on CPU Scheduling. Rs300 for the task.
+       </p>
+       <a class="text-lime-400 font-semibold" href="/apply.html">
+        Apply Now
+       </a>
+      </div>
+     </div>
+    </div>
+   </section>
+   <!-- FAQs Section -->
+   <section class="py-16">
+    <h2 class="text-3xl font-bold text-center mb-12">Frequently Asked Questions</h2>
+    <div class="max-w-4xl mx-auto px-4">
+        <div class="bg-gray-800 p-6 rounded-lg mb-4">
+            <button class="w-full text-left text-xl font-semibold focus:outline-none" onclick="toggleFaq('faq1')">
+                What is GigMate?
+                <i class="fas fa-chevron-down float-right"></i>
+            </button>
+            <div class="mt-2 hidden" id="faq1">
+                <p>GigMate is a platform where students can earn pocket money by offering services and completing small gigs.</p>
+            </div>
+        </div>
+        <div class="bg-gray-800 p-6 rounded-lg mb-4">
+            <button class="w-full text-left text-xl font-semibold focus:outline-none" onclick="toggleFaq('faq2')">
+                How do I post a gig?
+                <i class="fas fa-chevron-down float-right"></i>
+            </button>
+            <div class="mt-2 hidden" id="faq2">
+                <p>To post a gig, simply click on the "Post a Gig" link in the navigation bar and fill out the required information.</p>
+            </div>
+        </div>
+        <div class="bg-gray-800 p-6 rounded-lg mb-4">
+            <button class="w-full text-left text-xl font-semibold focus:outline-none" onclick="toggleFaq('faq3')">
+                How do I get paid?
+                <i class="fas fa-chevron-down float-right"></i>
+            </button>
+            <div class="mt-2 hidden" id="faq3">
+                <p>Once you complete a gig, the payment will be processed and transferred to your account.</p>
+            </div>
+        </div>
+        <div class="bg-gray-800 p-6 rounded-lg mb-4">
+            <button class="w-full text-left text-xl font-semibold focus:outline-none" onclick="toggleFaq('faq4')">
+                Is there a fee to use GigMate?
+                <i class="fas fa-chevron-down float-right"></i>
+            </button>
+            <div class="mt-2 hidden" id="faq4">
+                <p>GigMate is free to use for students. Employers may be charged a small fee for posting gigs.</p>
+            </div>
+        </div>
+    </div>
+</section>
+   <!-- Footer -->
+   <footer class="bg-gray-800 text-gray-200 py-8">
+    <div class="container mx-auto px-4 text-center">
+     <p>
+      © 2025 GigMate. All rights reserved.
+     </p>
+     <div class="mt-4 space-x-4">
+      <a class="text-gray-400 hover:text-lime-400" href="#">
+       <i class="fab fa-facebook-f">
+       </i>
+      </a>
+      <a class="text-gray-400 hover:text-lime-400" href="#">
+       <i class="fab fa-twitter">
+       </i>
+      </a>
+      <a class="text-gray-400 hover:text-lime-400" href="#">
+       <i class="fab fa-instagram">
+       </i>
+      </a>
+      <a class="text-gray-400 hover:text-lime-400" href="#">
+       <i class="fab fa-linkedin-in">
+       </i>
+      </a>
+     </div>
+    </div>
+   </footer>
+  </div>
+  <script>
+   document.addEventListener("DOMContentLoaded", function() {
+        setTimeout(function() {
+            document.querySelector('.logo-center').style.display = 'none';
+            document.querySelector('.content').classList.add('show', 'unfold');
+        }, 2000);
+    });
+
+    function scrollDown() {
+    window.scrollBy({
+        top: 400,
+        behavior: 'smooth'
+    });
+}
+
+function toggleFaq(id) {
+            const faq = document.getElementById(id);
+            faq.classList.toggle('hidden');
+}
+  </script>
+ </body>
+</html>
